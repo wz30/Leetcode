@@ -1,0 +1,22 @@
+
+public class Solution {
+    public boolean isPalindrome(String s) {
+        if(s == null) return true;
+        if(s.length()==1||s.length()==0) return true;
+        
+        //general way 1.deal with String only including letters and number(lowercase)(no signal or ' ' )
+        //            2.judge if palindrome 2.1 use half 
+        //                                  2.2 reverse (StringBuilder reverse)
+        s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase(); // replace not letter or number with ""  
+        StringBuilder sb = new StringBuilder(s);                                               
+        return sb.reverse().toString().equals(s);
+    }
+}
+
+
+// note : 
+//StringBuilder construct with a String 
+//reverse()
+//toString()
+
+//String toLowerCase()
