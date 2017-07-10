@@ -26,6 +26,7 @@ public class Solution {
  
     }
     
+    //compare the current node and its rightest node left subtree and then the right subtree
     public void inOrder(TreeNode node) {
         if(node == null) return;
         
