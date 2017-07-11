@@ -1,0 +1,47 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        //prestart : root 
+        return buildtree(preorder,  inorder, 0, 0, inorder.length - 1);
+    }
+    public TreeNode buildtree( int[] preorder, int[] inorder,int prestart, int instart, int inend) {
+        //boundary situation 1. pre > 2. instart and inend 
+        if(instart > inend || prestart > preorder.length -1)  
+            return null;
+        
+        TreeNode node = new TreeNode(preorder[prestart]); //root    
+        
+        int inindex = 0 ;  //for the inorder[inindex] == preorder[prestart]
+        for(int i = instart ; i <= inend; i++) {
+            if(inorder[i] == preorder[prestart])
+                inindex = i;
+        }
+        
+        node.left = buildtree( preorder, inorder, prestart+1, instart, inindex -1); // 
+        node.right = buildtree( preorder, inorder, prestart+inindex-instart+1, inindex+1, inend); //prestart : pass the number of the left subtrss + current node
+        return node;
+    }
+}
+
+/*
+The basic idea is here:
+Say we have 2 arrays, PRE and IN.
+Preorder traversing implies that PRE[0] is the root node.
+Then we can find this PRE[0] in IN, say it's IN[5].
+Now we know that IN[5] is root, so we know that IN[0] - IN[4] is on the left side, IN[6] to the end is on the right side.
+Recursively doing this on subarrays, we can build a tree out of it :)
+*/
+//from bottom to up
+//reference
+//http://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversal/
+
+//e.g. Inorder sequence: D B E A F C
+//     Preorder sequence: A B D E C F
