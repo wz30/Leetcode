@@ -1,0 +1,33 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        if(root == null) return true;
+        
+        return isSymmetric(root.left,root.right);
+    }
+    
+    public boolean isSymmetric(TreeNode p ,TreeNode q) {
+        //handle with the null 
+        /*if(p==null && q==null) return true;
+        if(p==null && q!=null) return false;
+        if(p!=null && q==null) return false;*/
+        if(p == null || q == null)
+            return p==q;
+        //general way
+        //if(p == q) return true;
+        if(p.val!=q.val) return false;  //why cant use p!=q : just compare the value not the object(the same reference)
+        
+        return  isSymmetric(p.left, q.right) && isSymmetric(p.right, q.left);
+        
+    }
+}
+
+//judge the symmetric tree with function who has two arguments 
