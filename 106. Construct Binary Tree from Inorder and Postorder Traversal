@@ -1,0 +1,34 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        
+        return BST(inorder, postorder, 0, inorder.length-1, postorder.length - 1);
+    }
+    public TreeNode BST(int[] inorder, int[] postorder, int instart, int inend, int poststart) {
+        if(poststart < 0 || instart>inend) return null;  //boundry case
+         
+        TreeNode node = new TreeNode(postorder[poststart]);
+        int inindex = 0;
+        for(int i = instart; i<=inend ;i++) {
+            if(postorder[poststart] == inorder[i])
+                inindex = i;   //get the current node in inorder[]
+        }
+        
+        
+        node.left = BST(inorder, postorder, instart,inindex -1,poststart-(inend - inindex +1));
+        node.right = BST(inorder, postorder,inindex +1 ,inend ,poststart-1);
+        return node;
+    }
+    
+}
+
+//need a example ***
+//http://www.geeksforgeeks.org/construct-a-binary-tree-from-postorder-and-inorder/
