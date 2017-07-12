@@ -1,0 +1,42 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    int re = 0;
+    public boolean isBalanced(TreeNode root) {
+        if(root == null) return true;
+        return res(root)!=-1;
+    }
+    
+    public int res(TreeNode node){
+        if(node == null) return 0;
+            
+        int left = res(node.left);
+        if(left == -1) return -1;
+        int right = res(node.right);
+        if(right == -1) return -1;
+        if(Math.abs(left-right)>=2) return -1;
+        return Math.max(left, right) + 1; 
+    }
+    
+
+}
+
+   
+
+//bottom up
+/*
+public type Traverse() {
+
+   node.left =      // left = 
+   node.right =     // right =
+   return node      // return left - right
+}
+
+*/
