@@ -24,3 +24,46 @@ public class Solution {
     
 }
 //idea: use a number to follow the node: create a function with two arguments with (treenode, int)
+
+
+
+//update
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    int  res = 0;
+    public int maxDepth(TreeNode root) {
+        if(root == null) return res;
+        cal(root, 1);
+        //return res;
+        return Cal(root);
+    }
+    
+    //first top to bottom(need void and res)
+    public void cal(TreeNode node, int depth) {
+        if(node == null) return;
+        
+        cal(node.left,depth+1);
+        res = res>depth?res:depth;
+        cal(node.right, depth+1);
+    }
+    
+    
+    //second way with bottom
+    public int Cal(TreeNode node) {
+        if(node == null) return 0;
+        
+        int left = Cal(node.left);
+        int right = Cal(node.right);
+        
+        return Math.max(left,right)+1;
+    }
+    
+}
