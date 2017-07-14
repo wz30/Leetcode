@@ -1,0 +1,66 @@
+/**
+ * Definition for binary tree with next pointer.
+ * public class TreeLinkNode {
+ *     int val;
+ *     TreeLinkNode left, right, next;
+ *     TreeLinkNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public void connect(TreeLinkNode root) {
+        if(root == null) return;
+        
+        TreeLinkNode levelStart = root;
+        while(levelStart!=null) {
+            TreeLinkNode cur = levelStart;
+            while(cur!=null) {
+                if(cur.left!=null) { //deal with cur.left: whho is the next
+                    if(cur.right != null) cur.left.next = cur.right;
+                    else {
+                        TreeLinkNode temp = cur.next;
+                        while(temp!=null) {
+                            if(temp.left != null) {cur.left.next = temp.left;break;}
+                            else if(temp.right != null) {cur.left.next = temp.right;break;}
+                            temp = temp.next;
+                        }
+                        
+                       
+                    }
+                }
+                if(cur.right!= null) {
+                    TreeLinkNode temp = cur.next;
+                    while(temp!=null) {
+                        if(temp.left != null) {cur.right.next = temp.left;break;}
+                        else if(temp.right != null) {cur.right.next = temp.right;break;}
+                        temp = temp.next;
+                    }
+                }
+                
+                cur = cur.next;
+            }
+            
+            
+            TreeLinkNode upd = levelStart;
+            //update the next level start node without null 
+            while(levelStart != null) {
+                if(levelStart.left != null) {
+                    levelStart = levelStart.left;break;
+                } else {
+                    if(levelStart.right != null) {
+                        levelStart = levelStart.right;break;
+                    }
+                }
+                levelStart = levelStart.next;
+            }
+            
+                 
+        }
+        
+    }
+}
+
+
+
+
+//idea: base an the I problem Additional deal with the null
+//use the levelStart = levelStart.next; and while
