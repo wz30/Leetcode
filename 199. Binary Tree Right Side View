@@ -1,0 +1,33 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    List<Integer> res = new ArrayList<Integer>();
+    public List<Integer> rightSideView(TreeNode root) {
+        if(root == null) return res; //boundary case
+        
+        rightSideUti(root, 0);
+        
+        return res;
+    }
+    public void rightSideUti(TreeNode node,int depth) {
+        if(node == null) return;
+        
+        if(depth == res.size())
+        res.add(node.val);
+        
+        rightSideUti(node.right, depth+1);
+        rightSideUti(node.left, depth+1);
+       
+    }
+}
+
+//the gist of this idea counting on the if(depth == res.size) res.add()*****
+//use depth 
+//question: need to get the tail of each level 
