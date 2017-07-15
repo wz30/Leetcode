@@ -1,0 +1,32 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> res = new ArrayList<String>();
+        if(root == null) return res;
+        
+        binaryTreeUtl(root, "", res);
+        return res;
+    }
+    public void binaryTreeUtl(TreeNode node,String path,List<String> res){
+        if(node == null) return; 
+        if(node.left==null && node.right==null) res.add(path + node.val); //3
+        binaryTreeUtl(node.left, path + node.val + "->", res); //1
+        binaryTreeUtl(node.right, path + node.val + "->", res); //2
+    }
+}
+
+
+//wrong idea: res.add() and then represent
+//right idea: recursive with the result
+//similar question: 129. Sum Root to Leaf Numbers
+//how to read the code in the correct order: 1 2 3
+// pay attention to path use the last step the path
