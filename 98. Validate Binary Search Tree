@@ -1,0 +1,89 @@
+//approach 1
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public boolean isValidBST(TreeNode root) {
+        if(root == null) return true;
+        return isValid(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+    public boolean isValid(TreeNode node, long min, long max) {
+        if(node == null) return true;
+        
+        if(node.val >= max || node.val <= min) return false;
+        
+        
+        return isValid(node.left, min, node.val) && isValid(node.right, node.val, max);
+        
+    }
+}
+//Long.MIN_VALUE, Long.MAX_VALUE for the case (-2147483648,2147483647)
+//for the case [10,5,20,null,null,8,30]
+//for 20 and 8 should be false (use min max)
+
+//approach 2
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+//inorder is real decreasing number
+public class Solution {
+    public boolean isValidBST(TreeNode root) {
+        if (root == null) return true;
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode p = root;
+        TreeNode pre = null;
+        while(!stack.isEmpty() || p!=null) {
+            if(p != null) {
+                stack.push(p);
+                p = p.left; //left
+            } else {
+                TreeNode node = stack.pop(); // the leftest node 
+                //inorder because of the decreasing number in inorder in BST
+                if(pre != null && node.val <= pre.val) return false;
+                pre = node;
+                
+                p = node.right; //right
+            }
+            
+        }
+        return true;
+    }
+}
+
+
+//connection 94. Binary Tree Inorder Traversal 
+//Line 19: error: cannot find symbol: method push(TreeNode) 
+//error: use List<TreeNode> stack = new LinkedList<TreeNode>();
+//method: LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
+public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        //use stack
+        LinkedList<TreeNode> stack = new LinkedList<TreeNode>();
+        TreeNode p = root;
+        //p for the first time 
+        while(p != null || !stack.isEmpty()) { 
+            if(p != null) {
+                stack.push(p);
+                p = p.left;
+            } else {
+                TreeNode node = stack.pop();
+                result.add(node.val); //add after all left children
+                p = node.right;
+            }
+            
+        }
+        
+        return result;
+    }
