@@ -1,0 +1,51 @@
+public class Solution {
+    public String decodeString(String s) {
+        //boundary case
+        if(s == null) return null;
+        String res = "";
+        
+        //normal case
+        Stack<String> stack = new Stack<>();
+        Stack<Integer> countStack = new Stack<>();
+        int length = s.length();
+        for(int i = 0; i < length; i++) {
+            char judge = s.charAt(i);
+            //store the count into the countStack (the case for 90, 900)
+            if(Character.isDigit(judge)) {
+                int j = i;
+                int count = 0; 
+                while(Character.isDigit(s.charAt(j))) {
+                    count = count*10 + s.charAt(j)-48;
+                    j++;
+                }
+                i =j -1;
+                countStack.push(count);
+            } else if(judge == '[') { //encounter the [ -- do the 
+                stack.push(res); //from the case 4 or case 
+                res = "";
+                
+            } else if(judge == ']') {//if encounter ], (case 3)
+                //pop the character first
+                StringBuilder repeated = new StringBuilder(stack.pop());
+                int repeatTimes = countStack.pop();
+                for(int j = 0 ;j < repeatTimes ;j++) 
+                    repeated.append(res);
+                res = repeated.toString();
+                
+            } else { //for the letter (case 4)
+                res += judge;
+            }
+            
+        }
+        
+        
+        //return result with StringBuilder
+        return res.toString();
+        
+    }
+}
+
+//note: dt; String and stack
+
+//question:
+//1. how to store the [] in the stack
