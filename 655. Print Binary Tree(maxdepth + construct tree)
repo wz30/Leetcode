@@ -1,0 +1,62 @@
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    int length =0;
+    List<List<String>> res = new ArrayList<List<String>>();
+    public List<List<String>> printTree(TreeNode root) {
+        if(root ==null) return res;
+        length = getHeight(root);       
+        //System.out.println(length);
+        //initialize the res
+        for(int i = 0; i < length; i++) {
+            List<String> re = new ArrayList<>();
+            for(int j = 0; j < (int)(Math.pow(2, length) - 1); j++) {
+                re.add("");
+            }
+            res.add(re);
+        }
+        inorder(root,0,(int)(Math.pow(2, length) - 2),0); //0-14/ 0-2 //0-7
+        return res;
+    }
+    public int getHeight(TreeNode node) {
+        if(node == null) return 0;
+        int left = getHeight(node.left);
+        int right = getHeight(node.right);
+        return Math.max(left,right)+1; 
+    }
+    public void inorder(TreeNode node,int begin, int end, int i) {
+        if(i >= length) return;
+        //if(node == null) return;
+        //List<String> re = new ArrayList<>();
+        int center = (end + begin)/2 ;
+        //System.out.println(center);
+        //addString(re, begin,center-1);
+        if(node != null) {
+            Integer val = new Integer(node.val);
+            res.get(i).set(center, val.toString());
+        }
+        //addString(re, center+1,end);
+         
+        //res.add(re);
+        
+        if(node != null) inorder(node.left,begin,center-1, i+1);
+        if(node != null) inorder(node.right,center+1,end, i+1);
+        
+    }
+    public void addString(List<String> re, int begin, int end) {
+        for(int i = begin; i <= end; i++) {
+            re.add("");
+        }
+    }
+    
+}
+
+//idea: Maxdepth + construct the tree
+//(int)(Math.pow(2, length) - 1)
