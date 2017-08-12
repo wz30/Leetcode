@@ -1,0 +1,48 @@
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+public class Solution {
+    public ListNode rotateRight(ListNode head, int k) {
+        //boundary case
+        if(head==null || head.next==null) return head; 
+        
+        /*
+        1.get the length
+        2.length-k%length(2,3)
+        2.rotate(need three pointer)
+        */
+        int length = 0;
+        //ListNode temp = new ListNode(0);
+        //temp.next = head;
+        ListNode tail = head;
+        ListNode mark = head;  
+        while(tail.next != null) {
+            length++;
+            tail = tail.next;
+        }
+        //System.out.println(tail.val);
+        //ListNode m = head;  
+        length++;
+        //System.out.println(length);
+        //int i = 0;
+        //ogic is important , the position of the mark ListNode
+        for(int j = length - (k%length); j >1; j--) 
+            mark = mark.next;
+        
+        //rotate the list
+        tail.next = head;
+        head = mark.next;
+        mark.next = null;
+        
+        return head;
+    }
+}
+
+//two pointers
+//head store the firsts node
+//tricky: what if k > length ?
