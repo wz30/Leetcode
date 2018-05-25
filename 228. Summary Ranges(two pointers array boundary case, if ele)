@@ -1,0 +1,38 @@
+//https://www.cnblogs.com/stiles/p/leetcode228.html
+//https://leetcode.com/problems/summary-ranges/description/ -- problem
+class Solution {
+    public List<String> summaryRanges(int[] nums) {
+        List<String> res = new ArrayList<>();
+        int n = nums.length;
+        if(n==0) return res;
+        else if(n==1) {
+            res.add(nums[0]+"");
+            return res;
+        }
+        int i = 1;
+        while(i<=n-1){
+            //case for only n-1
+            if(nums[i-1] +1 == nums[i] ){ //
+                int start = nums[i-1];
+                i = i+1;
+                
+                while(i<n && nums[i-1] +1 == nums[i]){//i+1<n
+                    i++;
+                }
+                int end = nums[i-1];
+                String str = start + "->" + end;
+                res.add(str);
+            }
+            else if(nums[i-1] +1 != nums[i] ){
+                res.add(nums[i-1]+"");}
+            i++;
+        }
+        //check the last element
+        if(nums[n-1] == nums[n-2]+1) {
+           
+        }else {
+            res.add(nums[n-1]+"");
+        }
+        return res;
+    }
+}
