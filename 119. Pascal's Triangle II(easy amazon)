@@ -1,3 +1,5 @@
+//https://leetcode.com/problems/pascals-triangle-ii/description/
+//blog: https://www.cnblogs.com/stiles/p/leetcode119.html
 class Solution {
     public List<Integer> getRow(int rowIndex) {
         List<Integer> res = new ArrayList<>();
