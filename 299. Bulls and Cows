@@ -1,0 +1,42 @@
+//march 11
+
+class Solution {
+    public String getHint(String secret, String guess) {
+        //dict problem
+        //
+        int a = 0;
+        int b = 0;
+        int[] t1 = new int[10];
+        int[] t2 = new int[10];
+        for(int i = 0; i < secret.length(); i++)
+        {
+            char c1 = secret.charAt(i);
+            char c2 = guess.charAt(i);
+            t1[c1-'0']++;
+            t2[c2-'0']++;
+            if(c1==c2) 
+            {
+                a++;
+                t1[c1-'0']--;
+                t2[c2-'0']--;
+            }
+            
+        }
+        //1: 1
+        // 1:2
+        for(int i = 0; i<10; i++)
+        {
+            if(t1[i]!=0)
+            {
+                b = b+Math.min(t1[i], t2[i]);
+            }
+            
+        }
+        return Integer.toString(a) +"A" + Integer.toString(b) + "B";
+    }
+}
+
+
+Similiar to anagtam: check if 1870 and 7810 are anagram or not
+but here need moren information: so sliding widow does not work:
+gain the position of the character.
