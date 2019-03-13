@@ -1,0 +1,57 @@
+400. Nth Digit
+Easy
+
+231
+
+721
+
+Favorite
+
+Share
+Find the nth digit of the infinite integer sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ...
+
+Note:
+n is positive and will fit within the range of a 32-bit signed integer (n < 231).
+
+Example 1:
+
+Input:
+3
+
+Output:
+3
+Example 2:
+
+Input:
+11
+
+Output:
+0
+
+Explanation:
+The 11th digit of the sequence 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, ... is a 0, which is part of the number 10.
+
+//Solution: accumalate the result and find the conenction, use one or two examples to simulate the whole process
+class Solution {
+    public int findNthDigit(int n) {
+        //1-9 : 9
+        //10 - 99 : 90
+        //100 - 999 : 900
+        long i = (long) n;
+        long tag = 9;
+        long count = 1;
+        long start = 1;
+        //99 as example
+        while(i > tag*count)
+        {
+            i = i-(tag*count);// 90 
+            tag = tag*10;//90
+            count ++; //2
+            start *= 10;//10
+        }
+        start  = start + (i-1)/count;//n-9 before so + 1 to equal start
+        String s = Long.toString(start);
+        return s.charAt((int)((i-1)%count))-'0';
+        
+    }
+}
