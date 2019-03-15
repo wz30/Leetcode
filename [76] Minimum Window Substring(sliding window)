@@ -1,0 +1,66 @@
+/*
+ * @lc app=leetcode id=76 lang=java
+ *
+ * [76] Minimum Window Substring
+ *
+ * https://leetcode.com/problems/minimum-window-substring/description/
+ *
+ * algorithms
+ * Hard (29.98%)
+ * Total Accepted:    215.6K
+ * Total Submissions: 719.1K
+ * Testcase Example:  '"ADOBECODEBANC"\n"ABC"'
+ *
+ * Given a string S and a string T, find the minimum window in S which will
+ * contain all the characters in T in complexity O(n).
+ * 
+ * Example:
+ * 
+ * 
+ * Input: S = "ADOBECODEBANC", T = "ABC"
+ * Output: "BANC"
+ * 
+ * 
+ * Note:
+ * 
+ * 
+ * If there is no such window in S that covers all characters in T, return the
+ * empty string "".
+ * If there is such window, you are guaranteed that there will always be only
+ * one unique minimum window in S.
+ * 
+ */
+class Solution {
+    public String minWindow(String s, String t) {
+        //originallly, methos is fussy
+        int l1 = s.length();
+        int l2 = t.length();
+        int[] map = new int[256];
+
+        for(int i = 0; i < l2; i++){
+            map[t.charAt(i)]++;
+        }
+        //tracking the head and distance(d)
+        int end = 0; int start = 0; int d = Integer.MAX_VALUE; int len = l2; int head = 0;
+        while(end < l1)
+        {
+            //in t 0,0,0,-1,-1, map value alwasy --, end always ++
+            //only when in t, len-- 
+            if(map[s.charAt(end)]-- > 0)
+                len--;              
+            end++;
+            //match
+            while(len==0){
+                if(end - start < d) d = end-(head=start); //update the d
+                if(map[s.charAt(start)]++ == 0)//make it invalid
+                    len++;
+                start++;
+            }
+        }
+        return d==Integer.MAX_VALUE ? "" : s.substring(head, head+d);
+
+    }
+}
+
+//Solution: sliding window version
+
