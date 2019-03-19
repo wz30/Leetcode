@@ -64,4 +64,4 @@ class Solution {
 
 //1. tot and n (5 and 6 as example)
 //2. overflow leads tle
-
+//when there is acculate or total, oerflow!
