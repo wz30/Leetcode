@@ -55,3 +55,33 @@ class Solution {
         
     }
 }
+
+
+//version 2
+class Solution {
+    public int findNthDigit(int n) {
+        //9  - 9
+        //90   180
+        //900   2700
+        //9000  3600
+        //alg: 
+
+        //88 - 
+        long nn = n;
+        long i = 0;
+        long count = 1;
+        long num = 9;
+        nn--;
+        long acc = 1;
+        while(nn > count*num){
+            acc+=(num);//accumlate the number 1, 10, 100
+            nn = nn- (count*num);
+            count++;
+            num*=10;
+        }
+        //System.out.println(nn);
+        //System.out.println((Long.toString(acc+nn/count)));
+        int res = (Long.toString(acc+nn/count)).charAt((int)(nn%count))-'0';
+        return res;
+    }
+}
