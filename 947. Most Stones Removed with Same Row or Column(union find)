@@ -1,0 +1,74 @@
+On a 2D plane, we place stones at some integer coordinate points.  Each coordinate point may have at most one stone.
+
+Now, a move consists of removing a stone that shares a column or row with another stone on the grid.
+
+What is the largest possible number of moves we can make?
+
+ 
+
+Example 1:
+
+Input: stones = [[0,0],[0,1],[1,0],[1,2],[2,1],[2,2]]
+Output: 5
+Example 2:
+
+Input: stones = [[0,0],[0,2],[1,1],[2,0],[2,2]]
+Output: 3
+Example 3:
+
+Input: stones = [[0,0]]
+Output: 0
+
+Solution:
+class Solution {
+    int[] arr;
+    public int removeStones(int[][] stones) {
+        //remove the stones to make them not share same rowed or column
+        //res = len - # connected component
+        int res = 0;
+        int len = stones.length;
+        arr = new int[20000];
+        //init n
+        for(int i = 0; i<arr.length; i++)
+            arr[i] = i;
+        for(int i = 0; i<len; i++){
+            //if(!connected(stones[i][0], stones[i][1]+10000))
+                union(stones[i][0], stones[i][1]+10000);
+        }
+        HashSet<Integer> set = new HashSet<>();
+        for(int i = 0; i<len; i++){
+           
+            set.add(arr[stones[i][0]]);
+            set.add(arr[stones[i][1]+10000]);
+        }
+        res = len - set.size();
+        return res;
+    }
+    
+   //quick find verison, make array of root array
+    boolean connected(int p, int q){
+        return (arr[p] == arr[q]);
+    }
+    void union(int p, int q){
+        int rp = arr[p];
+        int rq = arr[q];
+        for(int i =0; i<arr.length; i++){
+            if(arr[i]==rp) arr[i] = rq;
+        }
+    }
+    
+    //quick union version-- not good, can not use ahshset to get connected component
+    /*int root(int idx){
+        if(arr[idx]==idx) return idx;
+        return root(arr[idx]);
+    }
+    boolean connected(int p, int q){
+        return (root(p) == root(q));
+    }
+    void union(int p, int q){
+        int pp = root(p);
+        int qp = root(q);
+        arr[p] = qp;
+    }*/
+    
+}
