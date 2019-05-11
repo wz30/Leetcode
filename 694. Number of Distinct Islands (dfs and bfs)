@@ -1,0 +1,79 @@
+# 694. Number of Distinct Islands
+Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+
+Count the number of distinct islands. An island is considered to be the same as another if and only if one island can be translated (and not rotated or reflected) to equal the other.
+
+Example 1:
+11000
+11000
+00011
+00011
+Given the above grid map, return 1.
+Example 2:
+11011
+10000
+00001
+11011
+Given the above grid map, return 3.
+
+Notice that:
+11
+1
+and
+ 1
+11
+are considered different island shapes, because we do not consider reflection / rotation.
+Note: The length of each dimension in the given grid does not exceed 50.
+
+## explanation
+- similiar to problem number of islands and harder beecause we need to tell the difference of island. So we need to hash them by using base 
+  corordinate like (r - r0), (k - k0)
+
+## Solution 1:(dfs)
+···java
+class Solution {
+    //Set<> set = new HashSet<>();
+    Set<String> list = new HashSet<String>();
+    public int numDistinctIslands(int[][] grid) {
+        
+        
+        for(int i = 0; i<grid.length; i++){
+            for(int j = 0; j<grid[0].length; j++){
+                if(grid[i][j]==1){
+                    LinkedList<int[]> l = new LinkedList<>();
+                    dfs(grid, i, j, i, j, l);
+                    String str = new String();
+                    
+                    for(int[] ele : l){
+                        for(int k : ele){
+                            str = str + String.valueOf(k);
+                            
+                        }
+                        //System.out.print(" ");
+                    }
+                    System.out.println(str);
+                    list.add(str);
+                }
+                
+            }
+        }
+        
+        return list.size();
+    }
+    void dfs(int[][] grid, int i, int j, int i0, int j0, LinkedList<int[]> l){
+        if(i<0 || j<0 || i>=grid.length || j >= grid[0].length){
+            return;
+        }
+        if(grid[i][j]==1){
+            grid[i][j]=0;
+            l.add(new int[] {i-i0, j-j0});
+            
+            dfs(grid, i+1, j,i0, j0, l);
+            dfs(grid, i-1, j,i0, j0, l);
+            dfs(grid, i, j+1,i0, j0, l);
+            dfs(grid, i, j-1,i0, j0, l);
+        }
+        
+    }
+}
+···
