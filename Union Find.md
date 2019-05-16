@@ -3,6 +3,7 @@
 ### Different approach
 - quick find
 - quick union 
+- confusion about quick find and quick union, what does root represent?
 
 
 ### optimization
