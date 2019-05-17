@@ -10,6 +10,7 @@ Query sum:
 - [update the tree](https://visualgo.net/en/fenwicktree)
 - query the sum is in youtube video
 
+
 ### Pesudo code
 ```java
 class FenWickTree{
@@ -39,6 +40,9 @@ class FenWickTree{
     }
 
 ```
+
+### Related Questions
+- [307 Range Sum Query](https://leetcode.com/problems/range-sum-query-mutable/)
 
 ### Reference
 - [HuaHua Youtube Video](https://www.youtube.com/watch?v=WbafSgetDDk&t=18s)
