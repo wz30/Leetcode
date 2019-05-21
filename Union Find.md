@@ -115,6 +115,43 @@ class UnionFindSet:
 
 ```
 
+### resued strucutr in java
+```java
+class UnionFindSet{
+    int[] parent; 
+    int[] rank;
+    UnionFindSet(int n){
+        parent = new int[n];
+        rank = new int[n];
+        for(int i = 0; i<n; i++){
+            parent[i] = i;
+            rank[i] = 0;
+        }
+    }
+    int root(int i){
+        while(i!=parent[i]){
+            parent[i] = parent[parent[i]];//path compression
+            i = parent[i];
+        }
+        return parent[i];
+    }
+
+    void union(int i, int j){
+        int pi = root(i);
+        int pj = root(j);
+        if(pi==pj) return;
+
+        if(rank[pi]<rank[pj]){
+            parent[pi] = pj;
+        }else if(rank[pi]>rank[pj])
+            parent[pj] = pi;
+        else {
+            parent[pj] = pi;
+            ++rank[pi];
+        }
+    }
+}
+```
 
 
 ### Leetcode problems
