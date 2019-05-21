@@ -3,7 +3,7 @@
 ## Menu
 - HasMap
 
-
+-------------------------------------------------------------------------------
 ### HashMap
 - create the hashmap 
 ```java
@@ -20,7 +20,7 @@ for(int i = 0; i<S.length(); i++){
 }
 ```
 
-
+------------------------------------------------------------------------------
 ### binary search
 - upper bound: A[i] > target, first i, if does not exist return list.size()
 ```java
