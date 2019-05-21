@@ -89,6 +89,8 @@ else {id[j]=i; sz[i] += sz[j];}
 
 ### Questions
 - confusion about quick find and quick union, what does root represent?
+- checking the size, what if sz[i] == sz[j] ? 
+- time complexixity for ranking and path by compression
 
 ### Pseudo Code
 - Hua hua youtube, rank and Path compression
