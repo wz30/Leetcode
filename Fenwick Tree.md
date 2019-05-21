@@ -9,6 +9,7 @@ Query sum:
 ### Visualization 
 - [update the tree](https://visualgo.net/en/fenwicktree)
 - query the sum is in youtube video
+  ![](images/fenwick.PNG)
 
 
 ### Pesudo code
