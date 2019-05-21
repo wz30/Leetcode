@@ -13,6 +13,8 @@ Query sum:
 
 
 ### Pesudo code
+- time O(lgn)
+- space o(lgn)
 ```java
 class FenWickTree{
         int[] tree;
