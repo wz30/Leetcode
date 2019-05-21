@@ -92,6 +92,7 @@ else {id[j]=i; sz[i] += sz[j];}
 - checking the size, what if sz[i] == sz[j] ? 
 - time complexixity for ranking and path by compression
 
+
 ### Pseudo Code
 - Hua hua youtube, rank and Path compression
 ```java 
@@ -114,6 +115,7 @@ class UnionFindSet:
       ranks[px]++
 
 ```
+--------------------------------------------------------------------------
 
 ### resued strucutr in java
 ```java
