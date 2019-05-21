@@ -1,7 +1,9 @@
 ## Summary of Union Find
 
 ### Different approach
-- quick find
+- quick find (eager approach)
+  - find O(1)
+  - unite O(n)
 ```java
 public class QuickFind
 {
@@ -31,7 +33,59 @@ public class QuickFind
 ```
 ![](images/quick-find.png)
 
-- quick union 
+- quick union (lazy approach) lazy update the root of tree. Tree s can get tall
+  - find: O(n) : worst case: since the tree only has one node each layer
+```java
+public class QuickUnion
+{
+  private int[] id;
+  
+  public int root(int i)
+  {
+    while(i != id[i]) i = id[i];
+    return i;
+  }
+  
+  public boolean find(int p, int q)
+  {
+    return root(p)==root(q);
+  }
+  
+  public void unite(int p, int q)
+  {
+    int i = root(p);
+    int j = root(q);
+    di[i] = j;
+  }
+}
+```
+ 
+![](images/quick-union.png)
+
+### optimization
+- path compression: just after computing the root of i, set the id of each examined node to root(i);
+```java
+  public int root(int i)
+  {
+    while(i!=id[i])
+    {
+      id[i] = id[id[i]];//update i's parent to its grandparent
+      i = id[i]; //go to grandparent since the purpose is to find root
+    }
+  }
+```
+- Union by rank or weighted quick-union
+```java
+//Find: identical to quick union
+
+Union ,odify quick union to
+- merge smaller tree into larger tree
+- update the sz[] array
+if(sz[i] < sz[j]) {id[i] = j; sz[j] += sz[i];}
+else {id[j]=i; sz[i] += sz[j];}
+```
+
+
 
 ### Questions
 - confusion about quick find and quick union, what does root represent?
@@ -61,12 +115,7 @@ class UnionFindSet:
 
 
 
-### optimization
-- path compression
-- Union by rank
-
-
-
+### Leetcode problems
 
 
 
