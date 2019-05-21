@@ -126,3 +126,4 @@ class UnionFindSet:
 ### reference
 - [princeton algorithm class](https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf)
 - Union Find by Hua Hua in [Youtube](https://www.youtube.com/watch?v=VJnUwsE4fWA&t=319s)
+- https://zxi.mytechroad.com/blog/data-structure/sp1-union-find-set/ amortized
