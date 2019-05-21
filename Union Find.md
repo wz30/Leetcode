@@ -2,6 +2,35 @@
 
 ### Different approach
 - quick find
+```java
+public class QuickFind
+{
+  private int[] id;
+  
+  //
+  public QuickFind(int N)
+  {
+    id = new int[N];
+    for(int i = 0; i<N; i++)
+      id[i] = i;
+  }
+  
+  public boolean find(int i, int j)
+  {
+    return id[p]==id[q];
+  }
+  
+  //make tree flat and trees are only two layers
+  public void unite(int p, int q)
+  {
+    int pid = id[p];
+    for (int i=0; i<id.length; i++)
+      if(id[i]==pid) id[i] = id[q];
+  }
+}
+```
+![](images/quick-find.png)
+
 - quick union 
 
 ### Questions
