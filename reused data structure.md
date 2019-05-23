@@ -41,3 +41,24 @@ while(l < r){
 return l;
 }
 ```
+
+-----------------------------------------------------------------------------------
+### union find
+- quick union
+```java
+int root(int i){
+    return parent[i];
+}
+boolean isConnected(int i, int j){
+    if(parent[i]==parent[j]) return true;
+    else return false;
+}
+void union(int i, int j){
+    int pi = root(i);
+    int pj = root(j);
+    for(int ii = 0; ii<parent.length; ii++){
+        if(parent[ii]==pi) parent[ii] = pj; 
+    }
+}
+```
+
