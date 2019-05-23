@@ -1,0 +1,105 @@
+## 130. Surrounded Regions
+Given a 2D board containing 'X' and 'O' (the letter O), capture all regions surrounded by 'X'.
+
+A region is captured by flipping all 'O's into 'X's in that surrounded region.
+
+Example:
+
+X X X X
+X O O X
+X X O X
+X O X X
+
+After running your function, the board should be:
+
+X X X X
+X X X X
+X X X X
+X O X X
+
+Explanation:
+
+Surrounded regions shouldn’t be on the border, which means that any 'O' on the border of the board are not flipped to 'X'. Any 'O' that is not on the border and it is not connected to an 'O' on the border will be flipped to 'X'. Two cells are connected if they are adjacent cells connected horizontally or vertically.
+
+### Explanation
+- Similiar to number of islands, need to flip O to X
+- There is one more step to convert this to number of islands: flip O in the borders and connected ones to 'A', after dfs, flip back
+
+### Solution 1:
+- dfs
+```java
+class Solution {
+    public void solve(char[][] board) {
+        //similiar to nuber of isiland
+        //set all O in four borders to 'A'
+        //check four borders
+        if(board.length==0) return;
+        if(board[0].length==0) return;
+        for(int i =0; i<board[0].length; i++){
+            if(board[0][i]=='O')
+                dfs1(0, i, board);
+        }
+        for(int i =0; i<board[0].length; i++){
+            if(board[board.length-1][i]=='O')
+                dfs1(board.length-1, i, board);
+        }
+        for(int i =0; i<board.length; i++){
+            if(board[i][0]=='O')
+                dfs1(i, 0, board);
+        }
+        for(int i =0; i<board.length; i++){
+            if(board[i][board[0].length-1]=='O')
+                dfs1(i, board[0].length-1, board);
+        }
+        
+        for(int i = 1; i<board.length-1; i++){
+            for(int j = 1; j<board[0].length-1; j++){
+                if(board[i][j]=='O') {
+                    dfs2(i, j, board);
+                }
+            }
+            
+        }
+        
+        for(int i = 0; i<board.length; i++){
+            for(int j = 0; j<board[0].length; j++){
+                if(board[i][j]=='A') {
+                    board[i][j] = 'O';
+                }
+                //System.out.print(board[i][j]+" ");
+            }
+            //System.out.println();
+        }
+    }
+    void dfs2(int i, int j, char[][] board){
+        if(i<0 || j<0 || i>=board.length || j>=board[0].length){
+            return;
+        }
+        if(board[i][j]=='O'){
+            board[i][j] = 'X';
+            dfs2(i+1, j, board);
+            dfs2(i, j+1, board);
+            dfs2(i, j-1, board);
+            dfs2(i-1, j, board);
+        }
+    }
+    void dfs1(int i, int j, char[][] board){
+        if(i<0 || j<0 || i>=board.length || j>=board[0].length){
+            return;
+        }
+        if(board[i][j]=='O'){
+            board[i][j] = 'A';
+            dfs1(i+1, j, board);
+            dfs1(i, j+1, board);
+            dfs1(i, j-1, board);
+            dfs1(i-1, j, board);
+        }
+    }
+}
+```
+
+### Solution 2:
+- union find
+```java
+
+```
