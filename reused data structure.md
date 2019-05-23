@@ -20,6 +20,12 @@ for(int i = 0; i<S.length(); i++){
 }
 ```
 
+- retreive the elemnt form hashmap
+```java
+for(Map.entry<String. List<Integer>> entry: map.entrySet()){
+}
+```
+
 ------------------------------------------------------------------------------
 ### binary search
 - upper bound: A[i] > target, first i, if does not exist return list.size()
