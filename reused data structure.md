@@ -41,7 +41,18 @@ while(l < r){
 return l;
 }
 ```
-
+-lower bound
+```java
+int lower_bound(int[] list, int target){
+    int l = 0; int r = list.length;
+    while(l < r){
+        int m = (r-l)/2+l;
+        if(list[m] >= target) r = m;
+        else l = m+1;
+    }
+    return l;
+}
+```
 -----------------------------------------------------------------------------------
 ### union find
 - quick union
