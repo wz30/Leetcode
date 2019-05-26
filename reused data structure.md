@@ -22,7 +22,7 @@ for(int i = 0; i<S.length(); i++){
 
 - retreive the elemnt form hashmap
 ```java
-for(Map.entry<String. List<Integer>> entry: map.entrySet()){
+for(Map.Entry<String, List<Integer>> entry: map.entrySet()){
 }
 ```
 
