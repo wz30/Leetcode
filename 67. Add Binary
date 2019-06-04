@@ -1,0 +1,66 @@
+## 67. add binary
+
+Given two binary strings, return their sum (also a binary string).
+
+The input strings are both non-empty and contains only characters 1 or 0.
+
+Example 1:
+
+Input: a = "11", b = "1"
+Output: "100"
+
+Example 2:
+
+Input: a = "1010", b = "1011"
+Output: "10101"
+
+### Explanation
+- simulate the process of adding binary
+- using carry and sum/2 and sum%2
+
+### Solution 1: 
+- string + string and stringbuilder
+```java
+class Solution {
+    public String addBinary(String a, String b) {
+        int i = a.length()-1, j= b.length()-1;
+        StringBuilder sb = new StringBuilder();
+        int carry = 0;
+        while(i>=0 && j>=0){
+            int var1 = a.charAt(i)-'0';
+            int var2 = b.charAt(j)-'0';
+            int sum = var1+var2+carry;
+            carry = sum/2;
+            int remainder = sum%2;
+            char ele = (char)(remainder+'0');
+            sb.append(""+ele);
+            i--; j--;
+        }
+        //System.out.println(sb.reverse().toString());
+        if(i>=0){
+            carry = appendMore(i, a, carry,sb);
+        }else if(j>=0){
+            //System.out.println(sb.reverse().toString());
+            carry = appendMore(j, b, carry, sb);
+        }
+        if(carry==1)
+            sb.append('1');
+        return sb.reverse().toString();
+        
+        
+    }
+    int appendMore(int i, String a, int carry, StringBuilder sb){
+        while(i>=0){
+                int var1 = a.charAt(i)-'0';
+                int sum = var1+carry;
+                carry = sum/2;
+                int remainder = sum%2;
+                char ele = (char)(remainder+'0');
+                sb.append(""+ele);
+                i--;
+        }
+        return carry;
+    }
+}
+```
+
