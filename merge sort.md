@@ -46,3 +46,6 @@ class Main {
   }
 }
 ```
+
+### non recursive implementation
+- https://stackoverflow.com/questions/21897184/using-stacks-for-a-non-recursive-mergesort
