@@ -13,3 +13,7 @@ int f(int n) {
 ```java
 in this case, it is O(n)
 ```
+
+
+### Reference
+- https://www.ideserve.co.in/learn/time-and-space-complexity-of-recursive-algorithms
