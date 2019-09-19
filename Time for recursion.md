@@ -1,5 +1,5 @@
 ## Time complexity for recursion
-
+### Question
 ```java
 int recursiveFun1(int n)
 {
@@ -75,4 +75,4 @@ you should be making use of master theorem.
 ```
 
 ### Reference
-- (stackoverflow)[https://stackoverflow.com/questions/13467674/determining-complexity-for-recursive-functions-big-o-notation]
+- [stackoverflow](https://stackoverflow.com/questions/13467674/determining-complexity-for-recursive-functions-big-o-notation)
