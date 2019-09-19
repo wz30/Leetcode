@@ -68,5 +68,11 @@ Complexity = length of tree from root node to leaf node * number of leaf nodes
 Note: This is a quick and dirty way of calculating complexity(nothing official!). Would love to hear feedback on this. Thanks.
 ```
 
+
+### Solution 2
+```java
+you should be making use of master theorem.
+```
+
 ### Reference
 - (stackoverflow)[https://stackoverflow.com/questions/13467674/determining-complexity-for-recursive-functions-big-o-notation]
