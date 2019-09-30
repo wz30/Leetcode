@@ -10,6 +10,8 @@ The problem in leetcode in java version
 - 523 Continuous Subarray Sum [O(n^2), 1d dp(memory:O(n))] 
   - <strong>Solution 1</strong>: sum[i, j] = dp[j] - dp[i]+arr[i] or 
   - <strong>Solution 2</strong>: if a%k = c; b%k=c then(a-b)%k = 0(present it in hashmap)
+- 1208 Get Equal Substrings Within Budget [understand problem and sliding window O(n)]
+- 1209 Remove All Adjacent Duplicates in String II [stack unsolved and no edit yet....]
 ## Always remember: no md, no accepted
 - when you do not want write the md, that equals you solve nothing.
 - However you are familiar with the problem, time will make you weak.
