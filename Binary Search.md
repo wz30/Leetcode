@@ -14,7 +14,7 @@ def binary_search(l, r):
     if g(m):
       r = m; #new range[l, m)
     else 
-      l = m+1; new wrnage[m=1, r)
+      l = m+1; new wrnage[m+1, r)
   return l # or not found
 ```
 
@@ -22,3 +22,5 @@ def binary_search(l, r):
 - Lower bound A[i] >= target
   if there is no element greater or equal to target, then return n (the index of ele after last ele)
 - Upper bound A[i] > target
+
+### Example
