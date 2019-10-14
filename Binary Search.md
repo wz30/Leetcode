@@ -24,7 +24,7 @@ def binary_search(l, r):
 - Upper bound A[i] > target
 
 ### Example
-- LeetCode. 69 Sqrt(x)
+- LeetCode 69. Sqrt(x)
 - LeetCode 704. Binary Search
 - LeetCode 875. Koko Eating Bananas
 - LeetCode 378. Kth Smallest Element in a Sorted Matrix
