@@ -2,7 +2,7 @@
 
 ### Psuode code template
 - find the mimimal number to let g(m) return true
-- Time: O(log(r-1) * f(m) *g(m))
+- Time: O(log(r-l)) * O(f(m) + g(m))
 - Space O(1)
 ```java
 //[l, r) look out for the overflow in r
