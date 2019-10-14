@@ -7,6 +7,8 @@
 ```java
 //[l, r) look out for the overflow in r
 //why here can use r exclusive, what if using r inclusive??
+// g(m): 
+// f(m): 
 def binary_search(l, r):
   while(l < r):
     m = l + (r-l)/2
