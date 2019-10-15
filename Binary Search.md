@@ -21,7 +21,8 @@ def binary_search(l, r):
 ```
 
 ### Lower bound and upper bound
-- Lower bound: 
+- Lower bound: first index of i, such that A[i]>=x
+- Upper bound: first index of i, wuch that A[i]>x
 - Lower bound A[i] >= target
   if there is no element greater or equal to target, then return n (the index of ele after last ele)
 - Upper bound A[i] > target
