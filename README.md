@@ -13,7 +13,8 @@ The problem in leetcode in java version
 - 1208 Get Equal Substrings Within Budget [understand problem and sliding window O(n)]
 - 1209 Remove All Adjacent Duplicates in String II [stack unsolved and no edit yet....]
 - 348 Design Tic-Tac-Toe [check continous n in board or using two rwos?? O(n*n) -> O(n)]
-- 295 Find Median from Data Stream.md [two heaps(priority queue) O(lgn) to add number || balanced bst]
+- 295 Find Median from Data Stream [two heaps(priority queue) O(lgn) to add number || balanced bst]
+- 871 Minimum Number of Refueling Stops [heaps || ? o-1 kanpsack bags]
 ## Always remember: no md, no accepted
 - when you do not want write the md, that equals you solve nothing.
 - However you are familiar with the problem, time will make you weak.
