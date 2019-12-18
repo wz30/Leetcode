@@ -15,6 +15,7 @@ The problem in leetcode in java version
 - 348 Design Tic-Tac-Toe [check continous n in board or using two rwos?? O(n*n) -> O(n)]
 - 295 Find Median from Data Stream [two heaps(priority queue) O(lgn) to add number || balanced bst]
 - 871 Minimum Number of Refueling Stops [heaps || ? o-1 kanpsack bags]
+- 899 Orderly Queue [math and bubble sort || ? bfs tle]
 ## Always remember: no md, no accepted
 - when you do not want write the md, that equals you solve nothing.
 - However you are familiar with the problem, time will make you weak.
