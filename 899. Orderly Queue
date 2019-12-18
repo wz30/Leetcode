@@ -1,0 +1,59 @@
+## Problem
+```java
+A string S of lowercase letters is given.  Then, we may make any number of moves.
+
+In each move, we choose one of the first K letters (starting from the left), remove it, and place it at the end of the string.
+
+Return the lexicographically smallest string we could have after any number of moves.
+
+ 
+
+Example 1:
+
+Input: S = "cba", K = 1
+Output: "acb"
+Explanation: 
+In the first move, we move the 1st character ("c") to the end, obtaining the string "bac".
+In the second move, we move the 1st character ("b") to the end, obtaining the final result "acb".
+Example 2:
+
+Input: S = "baaca", K = 3
+Output: "aaabc"
+Explanation: 
+In the first move, we move the 1st character ("b") to the end, obtaining the string "aacab".
+In the second move, we move the 3rd character ("c") to the end, obtaining the final result "aaabc".
+ 
+
+Note:
+
+1 <= K <= S.length <= 1000
+S consists of lowercase letters only.
+```
+### Solution 
+```java
+class Solution {
+    public String orderlyQueue(String S, int K) {
+        //simple idea: use bfs to generate all the path with k, and maintain global variable res: TLE method
+        //this problem is tricky
+        //for case : K=1, only rotations are possible, and the answer is the smallest rotation
+        // if K > 1 , any permutation of S is possibile, and the answer is the letters of S written in lexicographic order
+        //similar to buble sort when K>2
+        if(K>1){
+            char[] temp = S.toCharArray();
+            Arrays.sort(temp);
+            String res = new String(temp);
+            return res;
+        }
+        
+        String res = S;
+        for(int i = 0; i<S.length(); i++){
+            String newStr = S.substring(i, S.length()) + S.substring(0,i);
+            if(newStr.compareTo(res) < 0) res = newStr;
+        }
+        return res;
+    }
+}
+```
+
+### Keywords
+- bubble sort, bfs, math, string comparsion
