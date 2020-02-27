@@ -17,6 +17,7 @@ The problem in leetcode in java version
 - 871 Minimum Number of Refueling Stops [heaps || ? o-1 kanpsack bags]
 - 899 Orderly Queue [math and bubble sort || ? bfs tle]
 - 1353 Maximum Number of Events That Can Be Attended [sort(by ending time) + greedy | bst+bs(?)]
+- 1354 1354. Construct Target Array With Multiple Sums [module, reverse or backtrack + maxheap]
 ## Amaazon interview
 ### Onsite
 - 200 number of island (Feb 2020)
