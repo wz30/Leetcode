@@ -18,7 +18,12 @@ The problem in leetcode in java version
 - 899 Orderly Queue [math and bubble sort || ? bfs tle]
 - 1353 Maximum Number of Events That Can Be Attended [sort(by ending time) + greedy | bst+bs(?)]
 - 1354 1354. Construct Target Array With Multiple Sums [module, reverse or backtrack + maxheap]
+
+### To do list
+- 755 Pour Water [related to trapping rain water]
+
 ## Amaazon interview
+- trapping rain water
 ### Onsite
 - 200 number of island (Feb 2020)
 ## Always remember: no md, no accepted
