@@ -4,8 +4,10 @@
 ### Solution 
 - bfs and dfs in O(V+E)
 - dfs: similar to regular dfs, except we need to print out the node or vertex lastly: only when we reach out all the nodes.
+  - have couple component: graph[i][i] indicates that.
 - bfs: remove the vertex with 0 indegree and reduce connected vertex's in degree and maintian the queue. (chinese blog is really clear)
   - we can use bfs to check if there is cycle in DG by simply keep the counter.
+  - do not need to worry about only 1 case: 
 ```java
 import java.util.ArrayList;
 import java.util.LinkedList;
