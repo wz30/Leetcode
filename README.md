@@ -26,6 +26,7 @@ The problem in leetcode in java version
 
 ## Amaazon interview
 - trapping rain water
+- 159 Longest Substring with At Most Two Distinct Characters (my interview 3/19)
 ### Onsite
 - 200 number of island (Feb 2020)
 ## Always remember: no md, no accepted
