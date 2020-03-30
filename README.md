@@ -17,7 +17,10 @@ The problem in leetcode in java version
 - 871 Minimum Number of Refueling Stops [heaps || ? o-1 kanpsack bags]
 - 899 Orderly Queue [math and bubble sort || ? bfs tle]
 - 1353 Maximum Number of Events That Can Be Attended [sort(by ending time) + greedy | bst+bs(?)]
-- 1354 1354. Construct Target Array With Multiple Sums [module, reverse or backtrack + maxheap]
+- 1354 Construct Target Array With Multiple Sums [module, reverse or backtrack + maxheap]
+- 3 Longest Substring Without Repeating Characters [two pointer + hashmap(while loop)]
+- 159 Longest Substring with At Most Two Distinct Characters [two pointer + hashmap(for + while)]
+- 340 Longest Substring with At Most K Distinct Characters [same as 159]
 
 ### To do list
 - 755 Pour Water [related to trapping rain water]
