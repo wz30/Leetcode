@@ -1,6 +1,7 @@
 # Leetcode
 The problem in leetcode in java version
-
+## counter [since 3/31/2020]
+- 1
 ## leetcode number
 - 36 Valid Sudoku [incomplete].
 - 247 Strobogrammatic Number II [recursion(return each layer), time complexity?].
@@ -21,6 +22,7 @@ The problem in leetcode in java version
 - 3 Longest Substring Without Repeating Characters [two pointer + hashmap(while loop)]
 - 159 Longest Substring with At Most Two Distinct Characters [two pointer + hashmap(for + while)]
 - 340 Longest Substring with At Most K Distinct Characters [same as 159]
+- 395 Longest Substring with At Least K Repeating Characters [divide and conquer | 2nd solution?]
 
 ### To do list
 - 755 Pour Water [related to trapping rain water]
