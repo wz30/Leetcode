@@ -34,6 +34,7 @@ The problem in leetcode in java version
 - trapping rain water
 - 159 Longest Substring with At Most Two Distinct Characters (my interview 3/19) (round 1)
 - swap nodes in pairs (my interview 3/20) (round 4)
+- next challenges related to this problem[1249. Minimum Remove to Make Valid Parentheses]
 
 ## Tron inteerview
 ### Onsite
