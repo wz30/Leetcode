@@ -1,7 +1,7 @@
 # Leetcode
 The problem in leetcode in java version
 ## counter [since 3/31/2020]
-- +4
+- +5
 ## leetcode number
 - 36 Valid Sudoku [incomplete].
 - 247 Strobogrammatic Number II [recursion(return each layer), time complexity?].
@@ -25,6 +25,7 @@ The problem in leetcode in java version
 - 395 Longest Substring with At Least K Repeating Characters [divide and conquer(time?) | 2nd solution?]
 - 953 Verifying an Alien Dictionary [logic and corner case | pre for Alein dictionary]
 - 53 maximum subarray [greedy [O(n)] | divide and conquer ? how and time]
+- 122 Best Time to Buy and Sell Stock II [greedy + math(what is the minimal profit:MaxNum-MinNum)]
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
