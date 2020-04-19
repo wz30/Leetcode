@@ -39,6 +39,9 @@ The problem in leetcode in java version
 - swap nodes in pairs (my interview 3/20) (round 4)
 - next challenges related to this problem[1249. Minimum Remove to Make Valid Parentheses]
 
+## Problem Collections
+- 单调栈
+- jump game collections [array greedy]
 ## Tron inteerview
 ### Onsite
 - 200 number of island (Feb 2020)
