@@ -42,7 +42,7 @@ The problem in leetcode in java version
 ## Problem Collections
 - 单调栈
 - jump game collections [array greedy
-- 连续数组之和 prefix sum    (a%K+K)%K  [523、525、560、974]
+- 连续数组之和 prefix sum    (a%K+K)%K  [523、525、560、974] [724, 713]
 
 ## Tron inteerview
 ### Onsite
