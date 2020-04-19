@@ -41,7 +41,9 @@ The problem in leetcode in java version
 
 ## Problem Collections
 - 单调栈
-- jump game collections [array greedy]
+- jump game collections [array greedy
+- 连续数组之和 prefix sum    (a%K+K)%K
+
 ## Tron inteerview
 ### Onsite
 - 200 number of island (Feb 2020)
