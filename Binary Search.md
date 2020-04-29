@@ -19,6 +19,8 @@ def binary_search(l, r):
       l = m+1; new wrnage[m+1, r)
   return l # or not found
 ```
+### Note
+- after break the while loop only when l=r and will return l, if l is not in the range of arr, return something else
 
 ### Lower bound and upper bound
 - Lower bound: first index of i, such that A[i]>=x
