@@ -30,7 +30,7 @@ def binary_search(l, r):
 - Upper bound A[i] > target
 
 ### Example
-- LeetCode 69. Sqrt(x)
+- LeetCode 69. Sqrt(x): 找到一个值>sqrt(x) , 然后值-1就是结果， g(m) = m^2-x>0
 - LeetCode 704. Binary Search
 - LeetCode 875. Koko Eating Bananas
 - LeetCode 378. Kth Smallest Element in a Sorted Matrix
