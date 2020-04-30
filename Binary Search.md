@@ -17,7 +17,7 @@ def binary_search(l, r):
       r = m; #new range[l, m)
     else 
       l = m+1; new wrnage[m+1, r)
-  return l # or not found
+  return l # or not found    in any case: l==r and break the while loop if not returning early
 ```
 ### Note
 - after break the while loop only when l=r and will return l, if l is not in the range of arr, return something else
