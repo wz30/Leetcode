@@ -1,0 +1,41 @@
+###
+- dp + 矩形面积计算 for loop
+- (huahua blog)[https://zxi.mytechroad.com/blog/dynamic-programming/leetcode-85-maximal-rectangle/]
+```java
+class Solution {
+    public int maximalRectangle(char[][] matrix) {
+        //长方形 横着边：长，竖着的边：宽
+        //利用dp 保存长
+        int m = matrix.length;
+        if(m==0) return 0;
+        int n = matrix[0].length;
+        int[][] dp = new int[m][n];//corner case is column 0
+        for(int i = 0; i<m; i++){
+            for(int j = 0; j<n; j++){
+                if(matrix[i][j]=='0'){
+                    dp[i][j]=0;
+                }else{
+                    dp[i][j] = (j==0 ? 1 : dp[i][j-1]+1);
+                }
+            }
+        }
+        //找最小的长， 木桶效应，观察实例，我们取3不取5
+        int res = 0;
+        //i decides the satrt point of 宽
+        for(int i = 0; i<m; i++){
+            for(int j = 0; j<n; j++){
+                //i,j是计算的区域的右上角，然后延长k去计算（脑海里想象虚线去包裹要计算的区域），这时有效的len是在这个区域对应下计算的，所以需要初始化
+                //why len is initialize here
+                int len = Integer.MAX_VALUE;//len means value of 长
+                for(int k = i; k<m; k++){
+                    len = Math.min(len, dp[k][j]);
+                    res = Math.max(res, len*(k-i+1));
+                }
+            }
+        }
+
+
+        return res;
+    }
+}
+```
