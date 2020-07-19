@@ -23,10 +23,11 @@ def binary_search(l, r):
 - after break the while loop only when l=r and will return l, if l is not in the range of arr, return something else
 
 ### Lower bound and upper bound
-- Lower bound: first index of i, such that A[i]>=x
+- Lower bound: first index of i, such that A[i]>=x 
 - Upper bound: first index of i, wuch that A[i]>x
 - Lower bound A[i] >= target
-  if there is no element greater or equal to target, then return n (the index of ele after last ele)
+  - if there is no element greater or equal to target, then return n (the index of ele after last ele)
+  - good example: 1 2 3 4 5 target: -1, 3, 7
 - Upper bound A[i] > target
 
 ### Example
