@@ -12,3 +12,4 @@
 
 ## Reference
 - master method to analyze the recursive funtion: (https://leetcode.com/explore/learn/card/recursion-ii/470/divide-and-conquer/2871/)
+- patterns are from the (link)[https://bbs.cvmart.net/topics/1232]
