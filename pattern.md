@@ -1,4 +1,4 @@
-# Overviwq
+# Overview
 - categorized the problem  into the pattern
 ##  Pattern: Top ‘K’ Elements，前K个系列
 - [x] Kth Largest Number in an Array (medium) (unorderes array)
@@ -10,6 +10,18 @@
 
 - question about Top K pattern, the problem usuallu assume the Top k elements are unqiue, how to handle the duplicate cases
 
+## Pattern: sliding window (two pointers)
+- In my exp, sliding window is using fixed window size,and when move the window, we always remove the left and add right.
+- two pointers is more flexible since the size of window is uncertain. The size is decided by the requirment or auusmption. Longest subsreing with at most k distinct character is a good example.
+- And they have two different templates
+  - [x] 3. Longest Substring Without Repeating Characters
+  - [x] 76 Minimum Window Substring 
+  - [x] 239 Sliding Window Maximum    
+  - [x] Longest Substring with At Most K Distinct Characters
+  - [x] Sliding Window Median (relaetd to problem: find median in stream)
+  - [x] Permutation in String
+  - [x] Longest Repeating Character Replacement 
+  - [x] Longest Substring with At Most Two Distinct Characters
 
 ## Reference
 - master method to analyze the recursive funtion: (https://leetcode.com/explore/learn/card/recursion-ii/470/divide-and-conquer/2871/)
