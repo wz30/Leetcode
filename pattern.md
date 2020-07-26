@@ -28,6 +28,7 @@
   - [x] 3 sum
   - [x] 4 sum
   - [x] 2 sum
+  - [x] 3 Sum closest
   
 ## Question
 - how to override the hashet eqyail method to custmize my own.
