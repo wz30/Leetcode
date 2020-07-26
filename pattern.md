@@ -23,6 +23,14 @@
   - [x] Longest Repeating Character Replacement 
   - [x] Longest Substring with At Most Two Distinct Characters
 
+## Pattern: two pointers, inlcuding k-sum
+- k-sum, using hashmap or two pointers. Both solution needs sorted array. And for 3sum, 4 sum, we need to care about duplicate elements. We can either use hashset or check in the while loop(nums[i]==nums[i-1]).
+  - [x] 3 sum
+  - [x] 4 sum
+  - [x] 2 sum
+  
+## Question
+- how to override the hashet eqyail method to custmize my own.
 ## Reference
 - master method to analyze the recursive funtion: (https://leetcode.com/explore/learn/card/recursion-ii/470/divide-and-conquer/2871/)
 - patterns are from the (link)[https://bbs.cvmart.net/topics/1232]
