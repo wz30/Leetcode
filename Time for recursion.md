@@ -8,6 +8,8 @@ int recursiveFun1(int n)
     else
         return 1 + recursiveFun1(n-1);
 }
+// O(n) since we hit each node
+// e.g.: get the minimal value between root to leaf[https://www.pramp.com/question/15oxrQx6LjtQj9JK9XqA]
 
 int recursiveFun2(int n)
 {
