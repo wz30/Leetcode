@@ -29,6 +29,8 @@
   - [x] 4 sum
   - [x] 2 sum
   - [x] 3 Sum closest
+## Pattern: bitwise XOR
+
   
 ## Question
 - how to override the hashet eqyail method to custmize my own.
