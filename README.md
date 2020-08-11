@@ -26,7 +26,7 @@ The problem in leetcode in java version
 - 953 Verifying an Alien Dictionary [logic and corner case | pre for Alein dictionary]
 - 53 maximum subarray [greedy [O(n)] | divide and conquer ? how and time]
 - 122 Best Time to Buy and Sell Stock II [greedy + math(what is the minimal profit:MaxNum-MinNum)]
-- 678. Valid Parenthesis String [low and high two pointer to indicate the min and max left open bracket][or using recursion]
+- 678 Valid Parenthesis String [low and high two pointer to indicate the min and max left open bracket][or using recursion]
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
