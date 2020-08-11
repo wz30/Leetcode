@@ -30,7 +30,7 @@
   - [x] 2 sum
   - [x] 3 Sum closest
 ## Pattern: bitwise XOR
-
+- x xor 0 -> x  (!!!!)
   
 ## Question
 - how to override the hashet eqyail method to custmize my own.
