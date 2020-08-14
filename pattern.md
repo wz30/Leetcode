@@ -32,6 +32,11 @@
 ## Pattern: bitwise XOR
 - x xor 0 -> x  (!!!!)
   
+## sqrt or root of any number
+- to do
+
+## Sale path problem with two follow-ups
+
 ## Question
 - how to override the hashet eqyail method to custmize my own.
 ## Reference
