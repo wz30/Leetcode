@@ -32,8 +32,9 @@
 ## Pattern: bitwise XOR
 - x xor 0 -> x  (!!!!)
   
-## sqrt or root of any number
-- to do
+## sqrt or root of any number, power(x, n) in lg(n)
+- root of number: binary search + math(|root-approxroot|<0.001)->(|root-approxRoot| < (approxRoot-leftBound)) then we only need to check (approxRoot-leftBound) < 0.001
+- power(x, n) we can always caculate power(x, n/2)
 
 ## Sale path problem with two follow-ups
 
