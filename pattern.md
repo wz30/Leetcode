@@ -31,6 +31,9 @@
   - [x] 3 Sum closest
 ## Pattern: bitwise XOR
 - x xor 0 -> x  (!!!!)
+- [x] single number i  (xor)
+- [x] single number ii (32 bit, for each digit) (or using automata ?)
+- [x] single number iii  (need to convert to single number i) [chinese solution is easy to understand]
   
 ## sqrt or root of any number, power(x, n) in lg(n)
 - root of number: binary search + math(|root-approxroot|<0.001)->(|root-approxRoot| < (approxRoot-leftBound)) then we only need to check (approxRoot-leftBound) < 0.001
