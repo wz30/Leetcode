@@ -16,7 +16,7 @@
 - And they have two different templates
   - [x] 3. Longest Substring Without Repeating Characters
   - [x] 76 Minimum Window Substring 
-  - [x] 239 Sliding Window Maximum    
+  - [x] 239 Sliding Window Maximum    [deque, queue is not enough since we need to removeLast, addLast]
   - [x] Longest Substring with At Most K Distinct Characters
   - [x] Sliding Window Median (relaetd to problem: find median in stream)
   - [x] Permutation in String
