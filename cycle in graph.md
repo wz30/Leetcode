@@ -1,5 +1,5 @@
 ## Cycle in graph
-
+## please refer to princeton code cycle[https://algs4.cs.princeton.edu/41graph/Cycle.java.html] and directed cycle(https://algs4.cs.princeton.edu/42digraph/DirectedCycle.java.html)
 ### Cycle in undirected graph
 - dfs with check back edge[under current vertex v1, v1 has adjacent vertext:v2 and v3, And then visit v2 , it has v1 and v4, so from v2->v1 is back edge and it is safe]
   - so we check vertex and parent, if they are eqaul, safe, otherwise, check if visited or not.
