@@ -21,7 +21,11 @@
   return true  
 ```
   - https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
-
+- example: 207. Course Schedule
+```
+here instead of using -1, we use two arrays, one is marked and another is onStack(for current visisting node)
+if not marked, then it is not on stack, if it is onstack, then it is marked
+```
 
 ### Number of cycles in undirected graph
 ```java
