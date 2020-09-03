@@ -1,0 +1,66 @@
+
+```java
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+
+class Result {
+
+    /*
+     * Complete the 'calculateLargestTeam' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING_ARRAY collaborations as parameter.
+     */
+    static int count;
+    public static int calculateLargestTeam(List<String> collaborations) {
+        if(collaborations.size()==0) return 0;
+        count = 0;
+        int m = collaborations.get(0).length();
+        char[][] matrix = new char[m][m];
+        for(int i = 0; i<collaborations.size(); i++){
+            String collaboration = collaborations.get(i);
+            for(int j = 0; j<collaboration.length(); j++){
+                matrix[i][j] = collaboration.charAt(j);
+            }
+        }
+        int[] size = new int[m];
+        boolean[] marked = new boolean[m];
+        for(int i = 0; i<m; i++){
+            if(!marked[i]){
+                dfs(i, matrix, marked,size);
+                count++;
+            }
+        }
+        int max = 1;
+        for(int i = 0; i<m; i++){
+            max = Math.max(max, size[i]);
+        }
+        
+        return max;
+    }
+    //dfs search adjcent list
+    static void dfs(int i, char[][] matrix, boolean[] marked, int[] size){
+        size[count]++;
+        marked[i] = true;
+        for(int k = 0; k<matrix.length; k++){
+            if(matrix[i][k]=='1' && !marked[k]){
+                dfs(k, matrix, marked,size);
+            }
+        }
+    }
+
+}
+
+public class Solution {
+```
