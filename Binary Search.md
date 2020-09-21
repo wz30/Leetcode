@@ -29,7 +29,8 @@ def binary_search(l, r):
   - if there is no element greater or equal to target, then return n (the index of ele after last ele)
   - good example: 1 2 3 4 5 target: -1, 3, 7
 - Upper bound A[i] > target
-
+- first index to satisfy condition 
+- last index to satisfy the condition - conver to first index (not satify the condition) -1
 ### Example
 - LeetCode 69. Sqrt(x): 找到一个值>sqrt(x) , 然后值-1就是结果， g(m) = m^2-x>0
 - LeetCode 704. Binary Search
