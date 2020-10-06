@@ -5,6 +5,9 @@
   - so we check vertex and parent, if they are eqaul, safe, otherwise, check if visited or not.
   - if (vertex==parent)
   - https://www.geeksforgeeks.org/detect-cycle-undirected-graph/
+  - update on 10/6/2020, so we need marked array to show if visisted or not and parent and current node and children of current node since we need to compare children with parent 
+        - if !marked, keep searching
+        - otherwise, if(children==parent): safe case    else(children!=parent)[it has hidden information (children!=partent && marked)] cycle dection!!!!!!
   
 ### Cycle in directed grpah
 - dfs with different flags status
