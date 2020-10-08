@@ -34,6 +34,7 @@ The problem in leetcode in java version
 - summary in [3,159,340,395]
 - divide and conquer [53]
 - 1163 Last Substring in Lexicographical Order: really make me upset
+- 1396 Design Underground System 【10/8/2020】
 
 ## Amaazon interview
 - trapping rain water
