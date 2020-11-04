@@ -28,6 +28,7 @@ The problem in leetcode in java version
 - 122 Best Time to Buy and Sell Stock II [greedy + math(what is the minimal profit:MaxNum-MinNum)]
 - 678 Valid Parenthesis String [low and high two pointer to indicate the min and max left open bracket][or using recursion]
 - 468 Validate IP Address [regex | mix with regex, if else, for]
+- 829 Consecutive Numbers Sum [math problem (kx = ), | citadel OA 2020 ]
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
