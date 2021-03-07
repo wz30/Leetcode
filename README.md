@@ -44,6 +44,12 @@ The problem in leetcode in java version
 - swap nodes in pairs (my interview 3/20) (round 4)
 - next challenges related to this problem[1249. Minimum Remove to Make Valid Parentheses]
 
+## Citadel 
+- Intern OA (3/7/2021)
+  - Triplets: 259. 3Sum Smaller (long need to convert sum to long or using a + b < sum -c)
+  - inversions: [5,4,3,2,1] cout how many inversion subsequence such than a[i]>a[j]>a[k] when i < j < k;
+    - using merge sort [https://leetcode.com/discuss/interview-question/661336/google-onsite-count-increasing-subsequences/646088]
+
 ## Problem Collections
 - 单调栈
 - jump game collections [array greedy
