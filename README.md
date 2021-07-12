@@ -29,6 +29,7 @@ The problem in leetcode in java version
 - 678 Valid Parenthesis String [low and high two pointer to indicate the min and max left open bracket][or using recursion]
 - 468 Validate IP Address [regex | mix with regex, if else, for]
 - 829 Consecutive Numbers Sum [math problem (kx = ), | citadel OA 2020 ]
+- 606 Construct String from Binary Tree [build a tree with recursion and stack]
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
