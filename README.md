@@ -30,6 +30,7 @@ The problem in leetcode in java version
 - 468 Validate IP Address [regex | mix with regex, if else, for]
 - 829 Consecutive Numbers Sum [math problem (kx = ), | citadel OA 2020 ]
 - 606 Construct String from Binary Tree [build a tree with recursion and stack]
+- 205 Isomorphic Strings [map each character | convert string to number | Isomorphic] (7/12/2021)
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
