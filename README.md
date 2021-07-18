@@ -31,6 +31,7 @@ The problem in leetcode in java version
 - 829 Consecutive Numbers Sum [math problem (kx = ), | citadel OA 2020 ]
 - 606 Construct String from Binary Tree [build a tree with recursion and stack]
 - 205 Isomorphic Strings [map each character | convert string to number | Isomorphic] (7/12/2021)
+- 408 Valid Word Abbreviation [recursion | two pointers ?] (7/18/2021)
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
