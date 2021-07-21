@@ -34,6 +34,7 @@ The problem in leetcode in java version
 - 408 Valid Word Abbreviation [recursion | two pointers ?] (7/18/2021)
 - 605 Can Place Flowers [check and set | easy]
 - 674 Longest Continuous Increasing Subsequence [two pointers]
+- 670 Maximum Swap [hashmap: O(n^2)-> O(n)]
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
