@@ -36,6 +36,7 @@ The problem in leetcode in java version
 - 674 Longest Continuous Increasing Subsequence [two pointers]
 - 670 Maximum Swap [hashmap: O(n^2)-> O(n)]
 - 983 Minimum Cost For Tickets [dp | dp[i] = dp[i+7] or dp[i+30] or dp[i+1] | dp[i] = dp[i-1] dp[i-7]]
+- 1522 Diameter of N-Ary Tree [recursion | great problem to practice height and depth recursively]
 ### To do list
 - 755 Pour Water [related to trapping rain water]
 - alein dictionary [Topological sort: find cycle in graph | dfs backtrack?]
