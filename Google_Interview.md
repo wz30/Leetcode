@@ -7,10 +7,10 @@
   X . X . . X \
   X . X . . X \
   X . . X . X \
-  X . . X . X \
+  X . . X . X 
   - example 2:  4 \
   . . \
-  . . \
+  . . 
   
 - given a map table such as:  $X$: A  $Y$: B , please figure out the string: $X$_$Y$ -> A_B
 - remove leaf node each time and return the rmoval sequences. O(nlgn) 
