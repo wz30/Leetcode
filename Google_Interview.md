@@ -3,12 +3,12 @@
   - for example: what is your most complicated project? Why? How?
 - reverse a linkedlist and find cycle in a directed graph
 - find longest path in a given mountain (first row is the top of the mountain, last row is the bottom of the mountain, X: blocker .: path/road)
-  - example 1: 6
+  - example 1: 6 \
   X . X . . X \
   X . X . . X \
   X . . X . X \
   X . . X . X \
-  - example 2:  4
+  - example 2:  4 \
   . . \
   . . \
   
