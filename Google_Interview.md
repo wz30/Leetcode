@@ -13,4 +13,5 @@
   . . 
   
 - given a map table such as:  $X$: A  $Y$: B , please figure out the string: $X$_$Y$ -> A_B
+  - follow up case: what is there is recursive map entry such as: $Z$: $X$K
 - remove leaf node each time and return the rmoval sequences. O(nlgn) 
