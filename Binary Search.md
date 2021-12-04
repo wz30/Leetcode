@@ -23,6 +23,9 @@ def binary_search(l, r):
 - after break the while loop only when l=r and will return l, if l is not in the range of arr, return something else
 
 ### Lower bound and upper bound
+- smallest element greater than target: upper bound, smallest element >= target: lower bound
+- smalltes element smaller than target: sort array and use the first index, largest element larger than target: 
+- largest element smaller than target: lower bound - 1(not 0); largest element <= target: upper bound-1( not 0)
 - Lower bound: first index of i, such that A[i]>=x 
 - Upper bound: first index of i, wuch that A[i]>x
 - Lower bound A[i] >= target
