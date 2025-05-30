@@ -29,7 +29,9 @@
  * If there is such window, you are guaranteed that there will always be only
  * one unique minimum window in S.
  * 
+
  */
+ ```
 class Solution {
     public String minWindow(String s, String t) {
         //originallly, methos is fussy
@@ -61,7 +63,7 @@ class Solution {
 
     }
 }
-
+```
 //Solution: sliding window version
 //reference https://leetcode.com/problems/minimum-window-substring/discuss/26808/here-is-a-10-line-template-that-can-solve-most-substring-problems
 
